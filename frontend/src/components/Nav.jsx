@@ -24,7 +24,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`bg-black text-white p-4 fixed top-0 w-full z-50 backdrop-filter backdrop-blur-lg bg-opacity-80 transition-transform duration-300 ${
+      className={`bg-black text-gray-300 p-4 fixed top-0 w-full z-50 backdrop-filter backdrop-blur-lg bg-opacity-80 transition-transform duration-300 ${
         isScrollingUp ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
