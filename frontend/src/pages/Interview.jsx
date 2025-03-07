@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import Nav from "../components/Nav";
 
 export default function Chat() {
   const [messages, setMessages] = useState([]);
@@ -43,10 +44,10 @@ export default function Chat() {
   };
 
   return (
-    <div className="flex h-screen w-full bg-gray-600 text-white mt-16"> {/* Black background, white text */}
+    <div className="flex h-screen w-full bg-[#212121] text-white "> {/* Black background, white text */}
       {/* Sidebar for previous chats */}
-      <div className="w-1/4 bg-gray-400 p-4 space-y-2"> {/* Dark gray sidebar */}
-        <button onClick={newChat} className="bg-gray-700 text-black w-full p-2 rounded-lg hover:bg-gray-300">New Chat</button>
+      <div className="w-1/4 bg-[#171717] p-4 space-y-2 rounded-lg"> {/* Dark gray sidebar with rounded corners */}
+        <button onClick={newChat} className="bg-[#303030] text-white w-full p-2 rounded-lg hover:bg-gray-300">New Chat</button>
         {chats.map((chat, index) => (
           <div key={index} className="flex justify-between bg-gray-700 p-2 rounded-lg">
             <span>Chat {index + 1}</span>
@@ -61,7 +62,7 @@ export default function Chat() {
           {messages.map((msg, index) => (
             <div
               key={index}
-              className={`p-3 rounded-lg max-w-xs ${msg.sender === "user" ? "bg-white text-black ml-auto" : "bg-gray-700 text-white"}`}
+              className={`p-3 rounded-lg ${msg.sender === "user" ?  ' bg-[#303030] text-white ml-auto max-w-xs rounded-full' : " text-white w-full rounded-xl"}`}
             >
               {msg.text}
             </div>
@@ -70,9 +71,9 @@ export default function Chat() {
         </div>
 
         {/* Input and actions */}
-        <div className="flex p-2 border-t border-gray-600">
+        <div className="flex p-2 border-t border-gray-600 rounded-lg">
           <input
-            className="flex-1 p-2 bg-gray-400 text-black rounded-lg outline-none"
+            className="flex-1 p-2 bg-[#303030] text-white rounded-lg outline-none"
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
