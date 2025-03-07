@@ -1,0 +1,25 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Environment Variables
+.env
+
+# Logs
+logs/
+*.log
+debug.log
+
+# Build files
+dist/
+build/
+
+# IDE settings
+.vscode/
+.idea/
+
+# OS-specific files
+.DS_Store
+Thumbs.db
